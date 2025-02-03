@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <link rel = "icon" type = "image/png" href = "images/Form.png">
+    <link rel = "stylesheet" href = "styles/styles.css">
 </head>
 <body>
-    
+    <div id = "main">
+        <h1>Contact Form</h1>
+
+        <form action = "submit-guestbook" method = "post">
+            <div class = "guestbook-form">
+                <label class = "label">
+                    First Name 
+                    <input type="text" name="fname">
+                </label>
+
+                <label class = "label">
+                    Last Name 
+                    <input type = "text" name = "lname">
+                </label>
+
+                <label class = "label">
+                    Job Title
+                    <input type = "text" name = "job">
+                </label>
+            </div>
+
+            <div class = guestbook-form>
+                <label class = "label">
+                    Company
+                    <input type = "text" name = "company">
+                </label>
+
+                <label class = "label">
+                    LinkedIn URL
+                    <input type = "text" name = "linkedin">
+                </label>
+
+                <label class = "label">
+                    Email Address
+                    <input type = "email" name = "email">
+                </label>
+            </div>
+
+            <div class = "guestbook-form">
+                <label class = "label">
+                    How did we meet?
+                    <select name = "meet">
+                        <option value = "none">Please select</option>
+                        <option value = "meetup">Event Meet-up</option>
+                        <option value = "jobfair">Job Fair</option>
+                    </select>
+                </label>
+
+                <label class = "label">
+                    Other (please specify)
+                    <input type = "text" name = "other">
+                </label>
+            </div>
+
+            <div>
+                <label class = "label">
+                    Message
+                    <input type = "text" name = "message">
+                </label>
+
+                <label class = "label">
+                    <input type = "checkbox" name = "mailing-list" value = "mail"> Please add me to your mailing list
+                </label>
+
+                <label>
+                    Choose an email format:
+                </label>
+
+                <label>
+                    <input type = "radio" name = "format" value = "html">HTML
+                </label>
+
+                <label>
+                    <input type = "radio" name = "format" value = "text">Text
+                </label>
+            </div>
+
+            <button type = "submit" id = "button">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

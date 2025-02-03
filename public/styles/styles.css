@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+#main {
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    padding: 0 1rem 2rem 1rem;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+}
+
+#button {
+    border: none;
+    background-color: darkgreen;
+    border-color: darkgreen;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    color: white;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    border-radius: .25rem;
+    margin: 0rem 0rem 1rem 0rem;
+    padding: .75rem;
+    display: flex;
+}
+
+.label {
+    display: block;
+    padding-bottom: .5rem;
+}
+
+.guestbook-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}

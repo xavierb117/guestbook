@@ -20,7 +20,7 @@ body {
     flex-direction: column;
 }
 
-#button {
+button {
     border: none;
     background-color: darkgreen;
     border-color: darkgreen;
@@ -36,17 +36,16 @@ input[type="text"], input[type="email"], select {
     border-radius: .25rem;
     margin: 0rem 0rem 1rem 0rem;
     padding: .75rem;
-    display: flex;
+    
 }
 
 .label {
+    flex: 1;
     display: block;
     padding-bottom: .5rem;
 }
 
 .guestbook-form {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    gap: 10px;
 }

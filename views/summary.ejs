@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary</title>
+    <link rel = "stylesheet" href = "../styles/styles.css">
+    <script src = "script/script.js" defer></script>
+</head>
+<body>
+    <h1>All Contacts</h1>
+    <% if (submission.length === 0) { %>
+        <p>No contacts to display</p>
+    <% } else { %>
+        <% for (let i = 0; i < submission.length; i++) { %>
+            <p>First name: <%= submission[i].fname %></p>
+            <p>Last name: <%= submission[i].lname %></p>
+            <p>Job: <%= submission[i].job %></p>
+            <p>Company: <%= submission[i].company %></p>
+            <p>LinkedIn: <%= submission[i].linkedin %></p>
+            <p>Email: <%= submission[i].email %></p>
+            <p>Meet: <%= submission[i].meet %></p>
+            <p>Other: <%= submission[i].other %></p>
+            <p>Message: <%= submission[i].message %></p>
+            <p>Format: <%= submission[i].format %></p>
+            <p>Timestamp: <%= submission[i].timestamp %></p>
+            <hr>
+        <% } %>
+    <% } %>
+    <a href = "/" class = "button">Add Another Contact</a>
+</body>
+</html>

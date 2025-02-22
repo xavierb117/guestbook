@@ -20,7 +20,7 @@ body {
     flex-direction: column;
 }
 
-button {
+.button {
     border: none;
     background-color: darkgreen;
     border-color: darkgreen;

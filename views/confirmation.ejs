@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel = "stylesheet" href = "styles/styles.css">
+    <script src = "script/script.js" defer></script>
+</head>
+<body>
+    <h2>Your contact information has been submitted</h2>
+    <p>First name: <%= check.fname %></p>
+    <p>Last name: <%= check.lname %></p>
+    <p>Job: <%= check.job %></p>
+    <p>Company: <%= check.company %></p>
+    <p>LinkedIn: <%= check.linkedin %></p>
+    <p>Email: <%= check.email %></p>
+    <p>Meet: <%= check.meet %></p>
+    <p>Other: <%= check.other %></p>
+    <p>Message: <%= check.message %></p>
+    <p>Format: <%= check.format %></p>
+    <p>Timestamp: <%= check.timestamp %></p>
+    <a href = "/" class = "button">Add Another Contact</a>
+    <a href = "/admin/orders" class = "button">Summary</a>
+</body>
+</html>

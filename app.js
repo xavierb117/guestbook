@@ -1,5 +1,21 @@
 import express from 'express';
 
+// import mariadb from 'mariadb';
+
+import { validateForm } from './services/validation.js';
+
+// import dotenv from 'dotenv';
+
+// dotenv.config();
+
+// const pool = mariadb.createPool({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_NAME,
+//     port: process.env.DB_PORT
+// });
+
 const app = express();
 
 app.use(express.static('public'));
@@ -26,13 +42,24 @@ app.post('/submit-guestbook', (req, res) => {
         email: req.body.email,
         meet: req.body.meet,
         other: req.body.other,
+        mailing: req.body.mailing,
         message: req.body.message,
         format: req.body.format,
         timestamp: new Date()
     };
 
-    if (check.fname.trim() === "" || check.lname.trim() === "" || check.email.trim() === "") {
-        res.send("Invalid Input");
+    // This is commented out as this code will be included in the validation file
+    // if (check.fname.trim() === "" || check.lname.trim() === "" || check.email.trim() === "") {
+    //     res.send("Invalid Input");
+    //     return;
+    // }
+
+    console.log(check);
+    
+    const result = validateForm(check);
+    if (!result.isValid) {
+        console.log(result.errors);
+        res.send(result.errors);
         return;
     }
 
